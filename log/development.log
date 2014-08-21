@@ -1,0 +1,981 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (551.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (67.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (40.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130126215239)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (212.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255), "referral_code" character varying(255), "referrer_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (38.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130126215239')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateAdminUsers (20130127063936)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (29.6ms)[0m  [1mCREATE TABLE "admin_users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.1ms)[0m  CREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")
+  [1m[36m (7.9ms)[0m  [1mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35mAdminUser Exists (1.8ms)[0m  SELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = 'tech@harrys.com' LIMIT 1
+  [1m[36mSQL (68.8ms)[0m  [1mINSERT INTO "admin_users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["created_at", Wed, 20 Aug 2014 16:26:25 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "tech@harrys.com"], ["encrypted_password", "$2a$10$DlOd4/qFcBHXd.2PSOXv7uAoVRg.8sPkFGEguOpGr.64LAsQHbwpy"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Wed, 20 Aug 2014 16:26:25 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130127063936')
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAdminNotes (20130127063939)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (44.6ms)[0m  [1mCREATE TABLE "admin_notes" ("id" serial primary key, "resource_id" character varying(255) NOT NULL, "resource_type" character varying(255) NOT NULL, "admin_user_id" integer, "admin_user_type" character varying(255), "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE INDEX "index_admin_notes_on_resource_type_and_resource_id" ON "admin_notes" ("resource_type", "resource_id")
+  [1m[36m (4.0ms)[0m  [1mCREATE INDEX "index_admin_notes_on_admin_user_type_and_admin_user_id" ON "admin_notes" ("admin_user_type", "admin_user_id")[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130127063939')
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Migrating to MoveAdminNotesToComments (20130127063940)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (22.9ms)[0m  [1mDROP INDEX "index_admin_notes_on_admin_user_type_and_admin_user_id"[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "admin_notes" RENAME TO "active_admin_comments"
+  [1m[36m (2.9ms)[0m  [1mALTER TABLE "admin_notes_id_seq" RENAME TO "active_admin_comments_id_seq"[0m
+  [1m[35m (1.8ms)[0m  ALTER TABLE "active_admin_comments" RENAME COLUMN "admin_user_type" TO "author_type"
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "active_admin_comments" RENAME COLUMN "admin_user_id" TO "author_id"[0m
+  [1m[35m (15.2ms)[0m  ALTER TABLE "active_admin_comments" ADD COLUMN "namespace" character varying(255)
+  [1m[36m (5.5ms)[0m  [1mCREATE INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (9.0ms)[0m  CREATE INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")
+  [1m[36m (1.3ms)[0m  [1mUPDATE active_admin_comments SET namespace='admin'[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130127063940')
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDelayedJobs (20130227185712)
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (7.6ms)[0m  [1mCREATE TABLE "delayed_jobs" ("id" serial primary key, "priority" integer DEFAULT 0, "attempts" integer DEFAULT 0, "handler" text, "last_error" text, "run_at" timestamp, "locked_at" timestamp, "failed_at" timestamp, "locked_by" character varying(255), "queue" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.4ms)[0m  CREATE INDEX "delayed_jobs_priority" ON "delayed_jobs" ("priority", "run_at")
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130227185712')[0m
+  [1m[35m (1.1ms)[0m  COMMIT
+Migrating to CreateIpAddresses (20130312045541)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (49.8ms)[0m  CREATE TABLE "ip_addresses" ("id" serial primary key, "address" character varying(255), "count" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130312045541')[0m
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 09:27:29 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (54.6ms)
+Compiled reset.css  (0ms)  (pid 11286)
+Compiled core.css  (25ms)  (pid 11286)
+Completed 200 OK in 418ms (Views: 381.7ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-20 09:27:30 -0700
+Served asset /reset.css - 200 OK (6ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-20 09:27:30 -0700
+Served asset /core.css - 200 OK (17ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2014-08-20 09:27:32 -0700
+Served asset /favicon.ico - 200 OK (36ms)
+
+
+Started GET "/assets/home/hero.jpg" for 127.0.0.1 at 2014-08-20 09:27:32 -0700
+Served asset /home/hero.jpg - 200 OK (44ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-20 09:27:32 -0700
+Served asset /home/key.png - 200 OK (17ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-20 09:27:53 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yiv8UGjqWNPiGef3AujlfzIbrqQbvyj7gzJy++h05UQ=", "user"=>{"email"=>"enkh@gmail.com"}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (59.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1[0m
+  [1m[35mIpAddress Load (52.6ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (267.9ms)[0m  INSERT INTO "ip_addresses" ("address", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["address", nil], ["count", 0], ["created_at", Wed, 20 Aug 2014 16:27:54 UTC +00:00], ["updated_at", Wed, 20 Aug 2014 16:27:54 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (37.1ms)[0m  [1mUPDATE "ip_addresses" SET "count" = 1, "updated_at" = '2014-08-20 16:27:54.425537' WHERE "ip_addresses"."id" = 1[0m
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (3.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."referral_code" = '1dba949f72' LIMIT 1[0m
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO "users" ("created_at", "email", "referral_code", "referrer_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 20 Aug 2014 16:27:54 UTC +00:00], ["email", "enkh@gmail.com"], ["referral_code", "1dba949f72"], ["referrer_id", nil], ["updated_at", Wed, 20 Aug 2014 16:27:54 UTC +00:00]]
+  [1m[36mSQL (30.1ms)[0m  [1mINSERT INTO "delayed_jobs" ("attempts", "created_at", "failed_at", "handler", "last_error", "locked_at", "locked_by", "priority", "queue", "run_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attempts", 0], ["created_at", Wed, 20 Aug 2014 16:27:55 UTC +00:00], ["failed_at", nil], ["handler", "--- !ruby/object:Delayed::PerformableMailer\nobject: !ruby/class 'UserMailer'\nmethod_name: :signup_email\nargs:\n- !ruby/ActiveRecord:User\n  attributes:\n    id: '1'\n    email: enkh@gmail.com\n    referral_code: !binary |-\n      MWRiYTk0OWY3Mg==\n    referrer_id: \n    created_at: 2014-08-20 16:27:54.653501044 Z\n    updated_at: 2014-08-20 16:27:54.653501044 Z\n"], ["last_error", nil], ["locked_at", nil], ["locked_by", nil], ["priority", 0], ["queue", nil], ["run_at", Wed, 20 Aug 2014 16:27:55 UTC +00:00], ["updated_at", Wed, 20 Aug 2014 16:27:55 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/refer-a-friend
+Completed 302 Found in 1729ms (ActiveRecord: 484.6ms)
+
+
+Started GET "/refer-a-friend" for 127.0.0.1 at 2014-08-20 09:27:55 -0700
+Processing by UsersController#refer as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = 1
+  Rendered users/refer.html.erb within layouts/application (352.0ms)
+Completed 200 OK in 441ms (Views: 416.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /reset.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /core.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/refer/cream-tooltip@2x.png" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /refer/cream-tooltip@2x.png - 200 OK (33ms)
+
+
+Started GET "/assets/refer/blade-explain@2x.png" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /refer/blade-explain@2x.png - 200 OK (26ms)
+
+
+Started GET "/assets/refer/winston@2x.png" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /refer/winston@2x.png - 200 OK (125ms)
+
+
+Started GET "/assets/refer/truman@2x.png" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /refer/truman@2x.png - 200 OK (76ms)
+
+
+Started GET "/assets/refer/logo.png" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /refer/logo.png - 200 OK (20ms)
+
+
+Started GET "/assets/refer/mammoth.png" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /refer/mammoth.png - 200 OK (43ms)
+
+
+Started GET "/assets/refer/fb.png" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /refer/fb.png - 200 OK (55ms)
+
+
+Started GET "/assets/refer/progress-bg.png" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /refer/progress-bg.png - 200 OK (49ms)
+
+
+Started GET "/assets/refer/twit.png" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /refer/twit.png - 200 OK (23ms)
+
+
+Started GET "/assets/refer/progress-done.png" for 127.0.0.1 at 2014-08-20 09:27:56 -0700
+Served asset /refer/progress-done.png - 200 OK (257ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 03:03:57 -0700
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (291.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1[0m
+  [1m[35mEXPLAIN (118.2ms)[0m  EXPLAIN SELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1
+EXPLAIN for: SELECT  "users".* FROM "users"  WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1
+                          QUERY PLAN
+---------------------------------------------------------------
+ Limit  (cost=0.00..10.88 rows=1 width=1056)
+   ->  Seq Scan on users  (cost=0.00..10.88 rows=1 width=1056)
+         Filter: ((email)::text = 'enkh@gmail.com'::text)
+(3 rows)
+
+Redirected to http://0.0.0.0:3000/refer-a-friend
+Filter chain halted as :skip_first_page rendered or redirected
+Completed 302 Found in 5366ms (ActiveRecord: 409.3ms)
+
+
+Started GET "/refer-a-friend" for 127.0.0.1 at 2014-08-21 03:04:19 -0700
+Processing by UsersController#refer as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1[0m
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = 1
+  Rendered users/refer.html.erb within layouts/application (722.7ms)
+Completed 200 OK in 2756ms (Views: 2691.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 03:04:26 -0700
+Served asset /reset.css - 304 Not Modified (221ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 03:04:34 -0700
+Served asset /core.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/refer/blade-explain@2x.png" for 127.0.0.1 at 2014-08-21 03:04:34 -0700
+Served asset /refer/blade-explain@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/cream-tooltip@2x.png" for 127.0.0.1 at 2014-08-21 03:04:34 -0700
+Served asset /refer/cream-tooltip@2x.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/refer/winston@2x.png" for 127.0.0.1 at 2014-08-21 03:04:34 -0700
+Served asset /refer/winston@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/truman@2x.png" for 127.0.0.1 at 2014-08-21 03:04:34 -0700
+Served asset /refer/truman@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/logo.png" for 127.0.0.1 at 2014-08-21 03:04:35 -0700
+Served asset /refer/logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/mammoth.png" for 127.0.0.1 at 2014-08-21 03:04:35 -0700
+Served asset /refer/mammoth.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/progress-done.png" for 127.0.0.1 at 2014-08-21 03:04:35 -0700
+Served asset /refer/progress-done.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/progress-bg.png" for 127.0.0.1 at 2014-08-21 03:04:35 -0700
+Served asset /refer/progress-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/fb.png" for 127.0.0.1 at 2014-08-21 03:04:35 -0700
+Served asset /refer/fb.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/twit.png" for 127.0.0.1 at 2014-08-21 03:04:35 -0700
+Served asset /refer/twit.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 03:12:08 -0700
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (70.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/refer-a-friend
+Filter chain halted as :skip_first_page rendered or redirected
+Completed 302 Found in 85ms (ActiveRecord: 70.3ms)
+
+
+Started GET "/refer-a-friend" for 127.0.0.1 at 2014-08-21 03:12:08 -0700
+Processing by UsersController#refer as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = 1[0m
+  Rendered users/refer.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 226ms (Views: 221.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 03:12:13 -0700
+Served asset /reset.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 03:12:13 -0700
+Served asset /core.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/refer/cream-tooltip@2x.png" for 127.0.0.1 at 2014-08-21 03:12:13 -0700
+Served asset /refer/cream-tooltip@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/blade-explain@2x.png" for 127.0.0.1 at 2014-08-21 03:12:13 -0700
+Served asset /refer/blade-explain@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/winston@2x.png" for 127.0.0.1 at 2014-08-21 03:12:13 -0700
+Served asset /refer/winston@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/truman@2x.png" for 127.0.0.1 at 2014-08-21 03:12:13 -0700
+Served asset /refer/truman@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/logo.png" for 127.0.0.1 at 2014-08-21 03:12:14 -0700
+Served asset /refer/logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/mammoth.png" for 127.0.0.1 at 2014-08-21 03:12:14 -0700
+Served asset /refer/mammoth.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/progress-bg.png" for 127.0.0.1 at 2014-08-21 03:12:14 -0700
+Served asset /refer/progress-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/twit.png" for 127.0.0.1 at 2014-08-21 03:12:14 -0700
+Served asset /refer/twit.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/fb.png" for 127.0.0.1 at 2014-08-21 03:12:14 -0700
+Served asset /refer/fb.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/refer/progress-done.png" for 127.0.0.1 at 2014-08-21 03:12:14 -0700
+Served asset /refer/progress-done.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 03:12:35 -0700
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1
+Redirected to http://0.0.0.0:3000/refer-a-friend
+Filter chain halted as :skip_first_page rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/refer-a-friend" for 127.0.0.1 at 2014-08-21 03:12:35 -0700
+Processing by UsersController#refer as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = 1
+  Rendered users/refer.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 58ms (Views: 32.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /reset.css - 304 Not Modified (52ms)
+
+
+Started GET "/assets/refer/winston@2x.png" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /refer/winston@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/truman@2x.png" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /refer/truman@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /core.css - 304 Not Modified (34ms)
+
+
+Started GET "/assets/refer/cream-tooltip@2x.png" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /refer/cream-tooltip@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/blade-explain@2x.png" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /refer/blade-explain@2x.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/logo.png" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /refer/logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/mammoth.png" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /refer/mammoth.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/refer/fb.png" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /refer/fb.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/twit.png" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /refer/twit.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/progress-done.png" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /refer/progress-done.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/progress-bg.png" for 127.0.0.1 at 2014-08-21 03:12:36 -0700
+Served asset /refer/progress-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 03:12:40 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 111ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 03:12:40 -0700
+Served asset /reset.css - 200 OK (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 03:12:40 -0700
+Served asset /core.css - 200 OK (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2014-08-21 03:12:41 -0700
+Served asset /favicon.ico - 200 OK (0ms)
+
+
+Started GET "/assets/home/hero.jpg" for 127.0.0.1 at 2014-08-21 03:12:41 -0700
+Served asset /home/hero.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 03:12:41 -0700
+Served asset /home/key.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 03:14:48 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 87ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 03:14:48 -0700
+Served asset /reset.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 03:14:48 -0700
+Served asset /core.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/home/hero.jpg" for 127.0.0.1 at 2014-08-21 03:14:49 -0700
+Served asset /home/hero.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 03:14:49 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 03:21:33 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1786.8ms)
+Compiled core.css  (484ms)  (pid 11286)
+Completed 200 OK in 26726ms (Views: 24019.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 03:22:07 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 03:22:07 -0700
+Served asset /core.css - 200 OK (8ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 03:22:08 -0700
+Served asset /home/page1.jpg - 200 OK (168ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 03:22:08 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:04:08 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 502ms (Views: 398.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:04:14 -0700
+Served asset /reset.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:04:14 -0700
+Served asset /core.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:04:17 -0700
+Served asset /home/page1.jpg - 200 OK (282ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:04:18 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:06:36 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (126.5ms)
+Completed 200 OK in 279ms (Views: 277.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:06:38 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:06:39 -0700
+Served asset /core.css - 304 Not Modified (128ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:06:39 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:06:39 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:10:23 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:10:23 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:10:23 -0700
+Served asset /core.css - 304 Not Modified (34ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:10:23 -0700
+Served asset /home/page1.jpg - 200 OK (297ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:10:26 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:13:34 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 63ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:13:34 -0700
+Served asset /core.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:13:34 -0700
+Served asset /reset.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:13:34 -0700
+Served asset /home/page1.jpg - 200 OK (30ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:13:35 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:13:36 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:13:36 -0700
+Served asset /reset.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:13:36 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:13:36 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:13:36 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:14:29 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:14:29 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:14:29 -0700
+Served asset /core.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:14:29 -0700
+Served asset /home/page1.jpg - 200 OK (10ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:14:29 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:14:30 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:14:30 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:14:30 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:14:30 -0700
+Served asset /home/page1.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:14:30 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:14:31 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:14:31 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:14:31 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:14:31 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:14:31 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:14:33 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:14:33 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:14:33 -0700
+Served asset /core.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:14:33 -0700
+Served asset /home/page1.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:14:33 -0700
+Served asset /home/key.png - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:14:35 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:14:35 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:14:35 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:14:35 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:14:35 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:18:06 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 676ms (Views: 571.6ms | ActiveRecord: 90.2ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:18:08 -0700
+Served asset /reset.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:18:08 -0700
+Served asset /core.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:18:09 -0700
+Served asset /home/page1.jpg - 304 Not Modified (57ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:18:09 -0700
+Served asset /home/key.png - 304 Not Modified (78ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:21:00 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:21:01 -0700
+Served asset /reset.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:21:01 -0700
+Served asset /core.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:21:01 -0700
+Served asset /home/page1.jpg - 200 OK (69ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:21:01 -0700
+Served asset /home/key.png - 304 Not Modified (25ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:21:02 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:21:02 -0700
+Served asset /reset.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:21:02 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:21:02 -0700
+Served asset /home/page1.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:21:02 -0700
+Served asset /home/key.png - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:21:04 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:21:04 -0700
+Served asset /reset.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:21:04 -0700
+Served asset /core.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:21:04 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:21:04 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:21:49 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 26ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:21:49 -0700
+Served asset /reset.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:21:49 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:21:49 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:21:49 -0700
+Served asset /home/key.png - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:29:31 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:29:31 -0700
+Served asset /reset.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:29:31 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:29:32 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:29:32 -0700
+Served asset /home/key.png - 304 Not Modified (21ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:31:30 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:31:30 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:31:30 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:31:30 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:31:30 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:31:33 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 30ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:31:33 -0700
+Served asset /reset.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:31:33 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:31:33 -0700
+Served asset /home/page1.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:31:33 -0700
+Served asset /home/key.png - 304 Not Modified (168ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:31:34 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:31:34 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:31:34 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:31:34 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:31:34 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:31:34 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:31:34 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:31:34 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:31:35 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:31:35 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 04:31:52 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:31:52 -0700
+Served asset /reset.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:31:52 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-21 04:31:52 -0700
+Served asset /home/page1.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-21 04:31:52 -0700
+Served asset /home/key.png - 304 Not Modified (0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-21 04:32:43 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E8fzLRa31B6PYpoj/wHjQWrcvzv939U6IPU0xoXxpBo=", "user"=>{"email"=>"ayman@gmail.com"}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (332.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'ayman@gmail.com' LIMIT 1[0m
+  [1m[35mEXPLAIN (11.9ms)[0m  EXPLAIN SELECT "users".* FROM "users" WHERE "users"."email" = 'ayman@gmail.com' LIMIT 1
+EXPLAIN for: SELECT  "users".* FROM "users"  WHERE "users"."email" = 'ayman@gmail.com' LIMIT 1
+                          QUERY PLAN
+---------------------------------------------------------------
+ Limit  (cost=0.00..10.88 rows=1 width=1056)
+   ->  Seq Scan on users  (cost=0.00..10.88 rows=1 width=1056)
+         Filter: ((email)::text = 'ayman@gmail.com'::text)
+(3 rows)
+
+  [1m[36mIpAddress Load (118.8ms)[0m  [1mSELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (109.7ms)[0m  [1mUPDATE "ip_addresses" SET "count" = 2, "updated_at" = '2014-08-21 11:32:47.672201' WHERE "ip_addresses"."id" = 1[0m
+  [1m[35m (123.2ms)[0m  COMMIT
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ayman@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."referral_code" IS NULL LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."referral_code" = 'f9e3c121c7' LIMIT 1[0m
+  [1m[35mSQL (259.8ms)[0m  INSERT INTO "users" ("created_at", "email", "referral_code", "referrer_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 21 Aug 2014 11:32:48 UTC +00:00], ["email", "ayman@gmail.com"], ["referral_code", "f9e3c121c7"], ["referrer_id", nil], ["updated_at", Thu, 21 Aug 2014 11:32:48 UTC +00:00]]
+  [1m[36mSQL (219.1ms)[0m  [1mINSERT INTO "delayed_jobs" ("attempts", "created_at", "failed_at", "handler", "last_error", "locked_at", "locked_by", "priority", "queue", "run_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["attempts", 0], ["created_at", Thu, 21 Aug 2014 11:32:52 UTC +00:00], ["failed_at", nil], ["handler", "--- !ruby/object:Delayed::PerformableMailer\nobject: !ruby/class 'UserMailer'\nmethod_name: :signup_email\nargs:\n- !ruby/ActiveRecord:User\n  attributes:\n    id: '2'\n    email: ayman@gmail.com\n    referral_code: !binary |-\n      ZjllM2MxMjFjNw==\n    referrer_id: \n    created_at: 2014-08-21 11:32:48.642380842 Z\n    updated_at: 2014-08-21 11:32:48.642380842 Z\n"], ["last_error", nil], ["locked_at", nil], ["locked_by", nil], ["priority", 0], ["queue", nil], ["run_at", Thu, 21 Aug 2014 11:32:52 UTC +00:00], ["updated_at", Thu, 21 Aug 2014 11:32:52 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/refer-a-friend
+Completed 302 Found in 7899ms (ActiveRecord: 2423.7ms)
+
+
+Started GET "/refer-a-friend" for 127.0.0.1 at 2014-08-21 04:32:53 -0700
+Processing by UsersController#refer as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'ayman@gmail.com' LIMIT 1[0m
+  [1m[35m (7.5ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = 2
+  Rendered users/refer.html.erb within layouts/application (332.8ms)
+Completed 200 OK in 608ms (Views: 591.9ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-21 04:32:59 -0700
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-21 04:32:59 -0700
+Served asset /core.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/refer/cream-tooltip@2x.png" for 127.0.0.1 at 2014-08-21 04:32:59 -0700
+Served asset /refer/cream-tooltip@2x.png - 200 OK (946ms)
+
+
+Started GET "/assets/refer/winston@2x.png" for 127.0.0.1 at 2014-08-21 04:33:00 -0700
+Served asset /refer/winston@2x.png - 200 OK (112ms)
+
+
+Started GET "/assets/refer/truman@2x.png" for 127.0.0.1 at 2014-08-21 04:33:00 -0700
+Served asset /refer/truman@2x.png - 200 OK (146ms)
+
+
+Started GET "/assets/refer/blade-explain@2x.png" for 127.0.0.1 at 2014-08-21 04:33:00 -0700
+Served asset /refer/blade-explain@2x.png - 200 OK (307ms)
+
+
+Started GET "/assets/refer/logo.png" for 127.0.0.1 at 2014-08-21 04:33:01 -0700
+Served asset /refer/logo.png - 200 OK (209ms)
+
+
+Started GET "/assets/refer/mammoth.png" for 127.0.0.1 at 2014-08-21 04:33:01 -0700
+Served asset /refer/mammoth.png - 200 OK (455ms)
+
+
+Started GET "/assets/refer/fb.png" for 127.0.0.1 at 2014-08-21 04:33:02 -0700
+Served asset /refer/fb.png - 200 OK (262ms)
+
+
+Started GET "/assets/refer/twit.png" for 127.0.0.1 at 2014-08-21 04:33:02 -0700
+Served asset /refer/twit.png - 200 OK (72ms)
+
+
+Started GET "/assets/refer/progress-done.png" for 127.0.0.1 at 2014-08-21 04:33:02 -0700
+Served asset /refer/progress-done.png - 200 OK (175ms)
+
+
+Started GET "/assets/refer/progress-bg.png" for 127.0.0.1 at 2014-08-21 04:33:02 -0700
+Served asset /refer/progress-bg.png - 200 OK (303ms)
