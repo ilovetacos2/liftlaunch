@@ -36,7 +36,6 @@ module Prelaunchr
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
     #config.assets.initialize_on_precompile = false
-    config.assets.compile = true
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
