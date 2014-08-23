@@ -6169,3 +6169,33 @@ Served asset /home/page1.jpg - 304 Not Modified (21ms)
 Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-22 17:46:02 -0700
 Served asset /home/key.png - 304 Not Modified (11ms)
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 06:17:37 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 381ms (Views: 170.3ms | ActiveRecord: 182.7ms)
+
+
+Started GET "/assets/core.css?body=1" for 127.0.0.1 at 2014-08-23 06:17:38 -0700
+Served asset /core.css - 200 OK (6ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-08-23 06:17:38 -0700
+Served asset /reset.css - 200 OK (2ms)
+
+
+Started GET "/assets/home/page1.jpg" for 127.0.0.1 at 2014-08-23 06:17:38 -0700
+Served asset /home/page1.jpg - 200 OK (34ms)
+
+
+Started GET "/assets/home/key.png" for 127.0.0.1 at 2014-08-23 06:17:38 -0700
+Served asset /home/key.png - 200 OK (19ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2014-08-23 06:17:39 -0700
+Served asset /favicon.ico - 200 OK (19ms)
