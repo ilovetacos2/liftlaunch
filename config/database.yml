@@ -20,5 +20,8 @@ test:
 
 production:
   adapter: postgresql
-  database: prelaunchr
-  host: localhost
+  database: d87qhjsus60q8f
+  host: ec2-107-20-191-205.compute-1.amazonaws.com
+  username: jhdjuoovtqacrx
+  password: ECg2rJJWf36280VaGZjL-IGKbW
+  port: 5432
