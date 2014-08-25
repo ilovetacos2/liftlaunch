@@ -6241,3 +6241,300 @@ Processing by UsersController#refer as HTML
   [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = 1[0m
   Rendered users/refer.html.erb within layouts/application (259.0ms)
 Completed 200 OK in 277ms (Views: 268.1ms | ActiveRecord: 2.3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:16:43 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 149ms (Views: 119.4ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:16:48 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>"g@ayman.com"}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (8.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'g@ayman.com' LIMIT 1[0m
+  [1m[35mIpAddress Load (1.3ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 108ms (ActiveRecord: 24.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:16:48 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:16:52 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>"g@ayman.com"}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'g@ayman.com' LIMIT 1[0m
+  [1m[35mIpAddress Load (2.3ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 42ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:16:52 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:20 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (125.0ms)
+Completed 200 OK in 221ms (Views: 183.3ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:18:26 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>"alex@ya.com"}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'alex@ya.com' LIMIT 1[0m
+  [1m[35mIpAddress Load (0.7ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 139ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:26 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:18:27 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>""}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35mIpAddress Load (1.0ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:27 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:18:33 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>"jj@llll.com"}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'jj@llll.com' LIMIT 1[0m
+  [1m[35mIpAddress Load (0.8ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:33 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:18:34 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>""}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35mIpAddress Load (1.0ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:34 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:18:35 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>""}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35mIpAddress Load (1.5ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:35 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:18:35 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>""}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35mIpAddress Load (0.8ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:35 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:18:39 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>"dsfsdfsdfg"}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'dsfsdfsdfg' LIMIT 1[0m
+  [1m[35mIpAddress Load (0.8ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:39 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:18:40 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>""}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35mIpAddress Load (0.6ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:40 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:18:41 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>""}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35mIpAddress Load (1.0ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:41 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:18:42 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>""}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35mIpAddress Load (0.6ms)[0m  SELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:42 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:18:59 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:19:12 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5F9XxEv9/aEajsU766rkn0iWJ3s1YXp8B8F/+qhPZdE=", "user"=>{"email"=>"enkh@gmail.com"}, "commit"=>"Step Inside"}
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/refer-a-friend
+Completed 302 Found in 19ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/refer-a-friend" for 127.0.0.1 at 2014-08-25 10:19:12 -0700
+Processing by UsersController#refer as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'enkh@gmail.com' LIMIT 1
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = 1[0m
+  Rendered users/refer.html.erb within layouts/application (500.4ms)
+Completed 200 OK in 517ms (Views: 510.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:19:52 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:20:04 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>"enkha@gmail.com"}, "commit"=>"Step Inside"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'enkha@gmail.com' LIMIT 1
+  [1m[36mIpAddress Load (0.9ms)[0m  [1mSELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:20:04 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:20:20 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>"alex@gmail.com"}, "commit"=>"Step Inside"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'alex@gmail.com' LIMIT 1
+  [1m[36mIpAddress Load (0.5ms)[0m  [1mSELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:20:20 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:20:24 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>""}, "commit"=>"Step Inside"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36mIpAddress Load (0.7ms)[0m  [1mSELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:20:24 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:20:32 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>"enkha@gmail.com"}, "commit"=>"Step Inside"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'enkha@gmail.com' LIMIT 1
+  [1m[36mIpAddress Load (1.3ms)[0m  [1mSELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:20:32 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2014-08-25 10:20:40 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5B3Sf2+fHgZD4cHA5I+2Oocx2FUyOxEpCuzxWvIX6mo=", "user"=>{"email"=>"enkha@gmail.com"}, "commit"=>"Step Inside"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'enkha@gmail.com' LIMIT 1
+  [1m[36mIpAddress Load (2.6ms)[0m  [1mSELECT "ip_addresses".* FROM "ip_addresses" WHERE "ip_addresses"."address" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 10:20:40 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
