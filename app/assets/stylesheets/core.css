@@ -66,7 +66,7 @@ html.home{
 }
 
 #home .hero .small{
-	font-weight: bold;
+	/*font-weight: bold;*/
 	color: #955F5D;
 	font-size: 18px;
 	margin: 10px 0 0 115px;
