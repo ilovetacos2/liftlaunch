@@ -14,7 +14,7 @@
         <p class="byline brandon">ENTER TO WIN FREE PRODUCTS </p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
-            <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
+            <input class="submit brandon" name="commit" type="submit" value="Step Inside" style="height:34px"/>
         <% end %>
     <% end %>
 </div>
