@@ -39,8 +39,8 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6168224" vertical-offset="0" max-vertical-offset="535">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.11214953" vertical-offset="0" max-vertical-offset="535">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#p#1;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -436,7 +436,11 @@
       <created>1409009612979</created>
       <updated>1409009612979</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="change subtitle color">
+      <created>1409010598709</created>
+      <updated>1409010598709</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -503,7 +507,8 @@
     <MESSAGE value="install new banner image for page 1" />
     <MESSAGE value="update facebook share image" />
     <MESSAGE value="remove shortcut icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove shortcut icon" />
+    <MESSAGE value="change subtitle color" />
+    <option name="LAST_COMMIT_MESSAGE" value="change subtitle color" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -878,8 +883,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6168224" vertical-offset="0" max-vertical-offset="535">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.11214953" vertical-offset="0" max-vertical-offset="535">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#p#1;n#div#0;n#!!top" expanded="true" />
           </folding>
