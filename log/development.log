@@ -6663,3 +6663,1630 @@ Started GET "/" for 127.0.0.1 at 2014-08-25 17:05:15 -0700
 Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-26 16:01:55 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 706ms (Views: 383.0ms | ActiveRecord: 267.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-08-26 16:02:01 -0700
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2014-08-26 16:02:02 -0700
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (2.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (1156.8ms)
+Compiled active_admin.css  (3796ms)  (pid 11046)
+Compiled active_admin/print.css  (252ms)  (pid 11046)
+Compiled jquery.js  (120ms)  (pid 11046)
+Compiled jquery-ui.js  (152ms)  (pid 11046)
+Compiled jquery_ujs.js  (0ms)  (pid 11046)
+Compiled active_admin/lib/namespace.js  (1614ms)  (pid 11046)
+Compiled active_admin/components/jquery.aa.checkbox-toggler.js  (611ms)  (pid 11046)
+Compiled active_admin/components/jquery.aa.dropdown-menu.js  (459ms)  (pid 11046)
+Compiled active_admin/components/jquery.aa.popover.js  (953ms)  (pid 11046)
+Compiled active_admin/components/jquery.aa.table-checkbox-toggler.js  (309ms)  (pid 11046)
+Compiled active_admin/pages/application.js  (294ms)  (pid 11046)
+Compiled active_admin/pages/batch_actions.js  (233ms)  (pid 11046)
+Compiled active_admin/application.js  (4661ms)  (pid 11046)
+Compiled active_admin/base.js  (5484ms)  (pid 11046)
+Compiled active_admin.js  (5560ms)  (pid 11046)
+Completed 200 OK in 11406ms (Views: 11332.8ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /active_admin.css - 200 OK (102ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /active_admin/print.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /jquery-ui.js - 200 OK (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /active_admin/lib/namespace.js - 200 OK (6ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 200 OK (6ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 200 OK (19ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 200 OK (3ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 200 OK (16ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /active_admin/pages/batch_actions.js - 200 OK (3ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:13 -0700
+Served asset /active_admin/base.js - 200 OK (37ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:14 -0700
+Served asset /active_admin.js - 200 OK (115ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-08-26 16:02:52 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lyl7hJ6gt2PqEainPnvZU0yB7TAMkYSn0uXe+cRytXM=", "admin_user"=>{"email"=>"enkhalifapro@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (102.7ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'enkhalifapro@gmail.com' LIMIT 1[0m
+Completed 401 Unauthorized in 364ms
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lyl7hJ6gt2PqEainPnvZU0yB7TAMkYSn0uXe+cRytXM=", "admin_user"=>{"email"=>"enkhalifapro@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (30.9ms)
+Completed 200 OK in 198ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /active_admin.css - 304 Not Modified (48ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /jquery-ui.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /active_admin/base.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:02:53 -0700
+Served asset /active_admin.js - 304 Not Modified (8ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (28.1ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /active_admin/print.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /active_admin.css - 304 Not Modified (34ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /jquery-ui.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /active_admin/base.js - 304 Not Modified (88ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:06 -0700
+Served asset /active_admin.js - 304 Not Modified (9ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2014-08-26 16:03:08 -0700
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (29.9ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:03:08 -0700
+Served asset /active_admin.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:03:08 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:08 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:08 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:08 -0700
+Served asset /jquery-ui.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:08 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:08 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:09 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:09 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:09 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:09 -0700
+Served asset /active_admin.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:09 -0700
+Served asset /active_admin/base.js - 304 Not Modified (78ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (27.7ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /active_admin.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /jquery-ui.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /active_admin/base.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:03:10 -0700
+Served asset /active_admin.js - 304 Not Modified (11ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-26 16:07:04 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2014-08-26 16:07:08 -0700
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2014-08-26 16:07:08 -0700
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (1.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (89.3ms)
+Completed 200 OK in 125ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:07:08 -0700
+Served asset /active_admin.css - 304 Not Modified (43ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:07:08 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:08 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:08 -0700
+Served asset /jquery-ui.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:09 -0700
+Served asset /jquery.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:09 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:09 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:09 -0700
+Served asset /active_admin/base.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:09 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:09 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:09 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:09 -0700
+Served asset /active_admin.js - 304 Not Modified (87ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-08-26 16:07:18 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"enkhalifapro@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[35mAdminUser Load (1.2ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'enkhalifapro@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 4ms
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"enkhalifapro@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (27.4ms)
+Completed 200 OK in 175ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:07:18 -0700
+Served asset /active_admin.css - 304 Not Modified (43ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /jquery-ui.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /active_admin/print.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /active_admin.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:07:19 -0700
+Served asset /active_admin/base.js - 304 Not Modified (6ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-08-26 16:09:54 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.7ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1[0m
+Completed 401 Unauthorized in 5ms
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (28.1ms)
+Completed 200 OK in 158ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /active_admin.css - 304 Not Modified (32ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /jquery-ui.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /active_admin/print.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /active_admin/base.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:09:55 -0700
+Served asset /active_admin.js - 304 Not Modified (8ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[35mAdminUser Load (1.4ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1
+Completed 401 Unauthorized in 5ms
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (99.4ms)
+Completed 200 OK in 235ms (Views: 125.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /active_admin.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /active_admin.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:11:13 -0700
+Served asset /active_admin/base.js - 304 Not Modified (8ms)
+
+
+Started GET "/admin/register" for 127.0.0.1 at 2014-08-26 16:14:32 -0700
+
+ActionController::RoutingError (No route matches [GET] "/admin/register"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2014-08-26 16:14:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/register"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-08-26 16:17:52 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"tech@harrys.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.8ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'tech@harrys.com' LIMIT 1[0m
+Completed 401 Unauthorized in 116ms
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"tech@harrys.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (30.3ms)
+Completed 200 OK in 165ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /active_admin/print.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /active_admin.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /jquery-ui.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /active_admin/base.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:17:53 -0700
+Served asset /active_admin.js - 304 Not Modified (6ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2014-08-26 16:23:55 -0700
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (2.6ms)
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (683.1ms)
+Compiled active_admin/print.css  (415ms)  (pid 12166)
+Compiled jquery.js  (2ms)  (pid 12166)
+Compiled jquery-ui.js  (10ms)  (pid 12166)
+Compiled jquery_ujs.js  (0ms)  (pid 12166)
+Compiled active_admin/lib/namespace.js  (387ms)  (pid 12166)
+Compiled active_admin/components/jquery.aa.checkbox-toggler.js  (297ms)  (pid 12166)
+Compiled active_admin/components/jquery.aa.dropdown-menu.js  (353ms)  (pid 12166)
+Compiled active_admin/components/jquery.aa.popover.js  (338ms)  (pid 12166)
+Compiled active_admin/components/jquery.aa.table-checkbox-toggler.js  (246ms)  (pid 12166)
+Compiled active_admin/pages/application.js  (229ms)  (pid 12166)
+Compiled active_admin/pages/batch_actions.js  (245ms)  (pid 12166)
+Compiled active_admin/application.js  (2313ms)  (pid 12166)
+Compiled active_admin/base.js  (2573ms)  (pid 12166)
+Compiled active_admin.js  (2686ms)  (pid 12166)
+Completed 200 OK in 4293ms (Views: 4255.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:23:59 -0700
+Served asset /active_admin.css - 304 Not Modified (91ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /active_admin/print.css - 200 OK (6ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /jquery-ui.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /active_admin/base.js - 304 Not Modified (50ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:00 -0700
+Served asset /active_admin.js - 304 Not Modified (38ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-08-26 16:24:05 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"tech@harrys.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.5ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'tech@harrys.com' LIMIT 1[0m
+Completed 401 Unauthorized in 226ms
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"tech@harrys.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (1.0ms)
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (38.8ms)
+Completed 200 OK in 259ms (Views: 148.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /active_admin.css - 304 Not Modified (101ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /active_admin/print.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /jquery-ui.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /active_admin/base.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:06 -0700
+Served asset /active_admin.js - 304 Not Modified (10ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"tech@harrys.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[35mAdminUser Load (1.1ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'tech@harrys.com' LIMIT 1
+Completed 401 Unauthorized in 116ms
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"tech@harrys.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (1.0ms)
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (30.5ms)
+Completed 200 OK in 249ms (Views: 139.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /active_admin.css - 304 Not Modified (38ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /active_admin/base.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:24:14 -0700
+Served asset /active_admin.js - 304 Not Modified (5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2014-08-26 16:28:27 -0700
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (3.4ms)
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (511.1ms)
+Completed 200 OK in 859ms (Views: 820.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:28:28 -0700
+Served asset /active_admin.css - 304 Not Modified (39ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /active_admin/print.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (75ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /jquery-ui.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /active_admin/base.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:29 -0700
+Served asset /active_admin.js - 304 Not Modified (119ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.7ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1[0m
+Completed 401 Unauthorized in 216ms
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (30.5ms)
+Completed 200 OK in 253ms (Views: 143.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /active_admin.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /jquery-ui.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /active_admin/base.js - 304 Not Modified (101ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-08-26 16:28:35 -0700
+Served asset /active_admin.js - 304 Not Modified (6ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2014-08-26 16:28:41 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j+t6Ug5qkhqGup3fTugLq7zEHw7b1Fco6S7wLUxs7vQ=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[35mAdminUser Load (1.1ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.3ms)[0m  UPDATE "admin_users" SET "last_sign_in_at" = '2014-08-26 23:28:41.907292', "current_sign_in_at" = '2014-08-26 23:28:41.907292', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2014-08-26 23:28:41.913610' WHERE "admin_users"."id" = 2
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 255ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-08-26 16:28:42 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (1.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (148.7ms)
+Completed 200 OK in 179ms (Views: 172.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:28:42 -0700
+Served asset /active_admin.css - 304 Not Modified (38ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:28:42 -0700
+Served asset /active_admin.js - 200 OK (5ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:28:42 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2014-08-26 16:28:55 -0700
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "admin_users" [0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mAdminUser Load (1.2ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT 30 OFFSET 0[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/resource/index.html.arb (307.7ms)
+Completed 200 OK in 415ms (Views: 322.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:28:55 -0700
+Served asset /active_admin.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:28:55 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/admin/admin_users/new" for 127.0.0.1 at 2014-08-26 16:29:08 -0700
+Processing by Admin::AdminUsersController#new as HTML
+  [1m[35mAdminUser Load (1.1ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/resource/new.html.arb (142.0ms)
+Completed 200 OK in 176ms (Views: 169.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:29:09 -0700
+Served asset /active_admin.css - 304 Not Modified (98ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:29:09 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2014-08-26 16:29:15 -0700
+Processing by Admin::UsersController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  [1m[35m (56.9ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "users" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "users" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" 
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/resource/index.html.arb (600.4ms)
+Completed 200 OK in 620ms (Views: 543.4ms | ActiveRecord: 64.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:29:15 -0700
+Served asset /active_admin.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:29:15 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/3" for 127.0.0.1 at 2014-08-26 16:29:20 -0700
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.9ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (2.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36m (26.9ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'User' AND "active_admin_comments"."resource_id" = '3' AND "active_admin_comments"."namespace" = 'admin'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'User' AND "active_admin_comments"."resource_id" = '3' AND "active_admin_comments"."namespace" = 'admin'
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/resource/show.html.arb (313.3ms)
+Completed 200 OK in 359ms (Views: 316.8ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:29:21 -0700
+Served asset /active_admin.css - 304 Not Modified (95ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:29:21 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/admin/users/2" for 127.0.0.1 at 2014-08-26 16:29:39 -0700
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'User' AND "active_admin_comments"."resource_id" = '2' AND "active_admin_comments"."namespace" = 'admin'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'User' AND "active_admin_comments"."resource_id" = '2' AND "active_admin_comments"."namespace" = 'admin'
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/resource/show.html.arb (142.4ms)
+Completed 200 OK in 153ms (Views: 145.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:29:39 -0700
+Served asset /active_admin.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:29:39 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2014-08-26 16:29:43 -0700
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'User' AND "active_admin_comments"."resource_id" = '1' AND "active_admin_comments"."namespace" = 'admin'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = 'User' AND "active_admin_comments"."resource_id" = '1' AND "active_admin_comments"."namespace" = 'admin'
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/resource/show.html.arb (140.4ms)
+Completed 200 OK in 150ms (Views: 143.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:29:44 -0700
+Served asset /active_admin.css - 304 Not Modified (109ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:29:44 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:30:08 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (48.0ms)
+Completed 200 OK in 58ms (Views: 52.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:30:08 -0700
+Served asset /active_admin.css - 304 Not Modified (114ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:30:09 -0700
+Served asset /active_admin/print.css - 304 Not Modified (5ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:33:46 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (1.1ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (120.0ms)
+Completed 200 OK in 183ms (Views: 125.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:33:47 -0700
+Served asset /active_admin.css - 304 Not Modified (90ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:33:47 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:33:47 -0700
+Served asset /active_admin.js - 304 Not Modified (6ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:33:56 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.6ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (122.4ms)
+Completed 200 OK in 176ms (Views: 127.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:33:57 -0700
+Served asset /active_admin.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:33:57 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:33:57 -0700
+Served asset /active_admin.js - 304 Not Modified (78ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:39:05 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (1.5ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (67.4ms)
+Completed 200 OK in 80ms (Views: 73.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:05 -0700
+Served asset /active_admin.css - 304 Not Modified (105ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:05 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:39:05 -0700
+Served asset /active_admin.js - 304 Not Modified (6ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:39:08 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.9ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (115.9ms)
+Completed 200 OK in 123ms (Views: 119.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:08 -0700
+Served asset /active_admin.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:08 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:39:08 -0700
+Served asset /active_admin.js - 304 Not Modified (6ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:39:09 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (1.3ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (123.5ms)
+Completed 200 OK in 132ms (Views: 128.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:09 -0700
+Served asset /active_admin.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:39:09 -0700
+Served asset /active_admin.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:09 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:39:10 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (122.9ms)
+Completed 200 OK in 133ms (Views: 129.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:10 -0700
+Served asset /active_admin.css - 304 Not Modified (99ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:39:10 -0700
+Served asset /active_admin.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:10 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:39:31 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (1.4ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (109.4ms)
+Completed 200 OK in 119ms (Views: 113.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:31 -0700
+Served asset /active_admin.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:39:31 -0700
+Served asset /active_admin.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:31 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:39:32 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.9ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (113.1ms)
+Completed 200 OK in 121ms (Views: 117.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:32 -0700
+Served asset /active_admin.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:39:32 -0700
+Served asset /active_admin.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:32 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:39:33 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.9ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (120.8ms)
+Completed 200 OK in 128ms (Views: 124.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:34 -0700
+Served asset /active_admin.css - 304 Not Modified (97ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:34 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:39:34 -0700
+Served asset /active_admin.js - 304 Not Modified (12ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:39:55 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (245.4ms)
+Completed 200 OK in 385ms (Views: 264.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:55 -0700
+Served asset /active_admin.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:39:56 -0700
+Served asset /active_admin/print.css - 304 Not Modified (72ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:39:56 -0700
+Served asset /active_admin.js - 304 Not Modified (39ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2014-08-26 16:40:11 -0700
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[35mAdminUser Load (1.0ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "admin_users" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mAdminUser Load (1.4ms)[0m  SELECT "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT 30 OFFSET 0
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/resource/index.html.arb (574.3ms)
+Completed 200 OK in 670ms (Views: 574.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:40:12 -0700
+Served asset /active_admin.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:40:12 -0700
+Served asset /active_admin.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:40:12 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:40:14 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (118.5ms)
+Completed 200 OK in 128ms (Views: 123.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:40:15 -0700
+Served asset /active_admin.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:40:15 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:40:15 -0700
+Served asset /active_admin.js - 304 Not Modified (82ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2014-08-26 16:44:16 -0700
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[35mAdminUser Load (1.2ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "admin_users" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "admin_users" LIMIT 30 OFFSET 0) subquery_for_count [0m
+  [1m[35mAdminUser Load (0.8ms)[0m  SELECT "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT 30 OFFSET 0
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/resource/index.html.arb (179.6ms)
+Completed 200 OK in 194ms (Views: 183.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:44:17 -0700
+Served asset /active_admin.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:44:17 -0700
+Served asset /active_admin/print.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:44:17 -0700
+Served asset /active_admin.js - 304 Not Modified (13ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:44:20 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (108.2ms)
+Completed 200 OK in 116ms (Views: 112.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:44:20 -0700
+Served asset /active_admin.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:44:20 -0700
+Served asset /active_admin.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:44:20 -0700
+Served asset /active_admin/print.css - 304 Not Modified (2ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:45:36 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (1.1ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (115.6ms)
+Completed 200 OK in 178ms (Views: 119.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:45:36 -0700
+Served asset /active_admin.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:45:36 -0700
+Served asset /active_admin.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:45:36 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:45:39 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (126.6ms)
+Completed 200 OK in 136ms (Views: 131.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:45:39 -0700
+Served asset /active_admin.css - 304 Not Modified (117ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:45:39 -0700
+Served asset /active_admin.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:45:39 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:46:35 -0700
+
+SyntaxError (/home/administrator/Projects/liftlaunch/app/admin/dashboard.rb:36: syntax error, unexpected keyword_end, expecting $end):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (56.5ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:46:48 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.5ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (117.6ms)
+Completed 200 OK in 178ms (Views: 121.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:46:49 -0700
+Served asset /active_admin.css - 304 Not Modified (43ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:46:49 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:46:49 -0700
+Served asset /active_admin.js - 304 Not Modified (11ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:46:54 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (2.0ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (153.8ms)
+Completed 200 OK in 362ms (Views: 160.6ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:46:55 -0700
+Served asset /active_admin.css - 304 Not Modified (43ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:46:55 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:46:55 -0700
+Served asset /active_admin.js - 304 Not Modified (10ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:47:27 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.5ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (47.8ms)
+Completed 200 OK in 174ms (Views: 52.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:47:28 -0700
+Served asset /active_admin.css - 304 Not Modified (95ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:47:28 -0700
+Served asset /active_admin.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:47:28 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:47:30 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (117.9ms)
+Completed 200 OK in 127ms (Views: 121.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:47:31 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.9ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (108.9ms)
+Completed 200 OK in 116ms (Views: 112.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:47:31 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1[0m
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (53.4ms)
+Completed 200 OK in 68ms (Views: 60.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:47:31 -0700
+Served asset /active_admin.css - 304 Not Modified (110ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:47:31 -0700
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:47:31 -0700
+Served asset /active_admin.js - 304 Not Modified (8ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2014-08-26 16:47:39 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.6ms)[0m  SELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = 2 LIMIT 1
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/page/index.html.arb (121.7ms)
+Completed 200 OK in 185ms (Views: 126.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-08-26 16:47:40 -0700
+Served asset /active_admin.css - 304 Not Modified (96ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2014-08-26 16:47:40 -0700
+Served asset /active_admin.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:47:40 -0700
+Served asset /active_admin/print.css - 304 Not Modified (1ms)
