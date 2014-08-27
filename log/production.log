@@ -1205,3 +1205,24 @@ Compiled core.css  (6ms)  (pid 15222)
 Compiled users.css  (2ms)  (pid 15222)
 Compiled application.css  (32ms)  (pid 15222)
 Compiled active_admin/print.css  (192ms)  (pid 15222)
+Connecting to database specified by database.yml
+Started GET "/admin/login" for 127.0.0.1 at 2014-08-27 05:52:10 -0700
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/shared/_links.erb (2.1ms)
+  Rendered /home/administrator/.rvm/gems/ruby-1.9.3-p547/gems/activeadmin-0.5.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (545.2ms)
+Completed 200 OK in 821ms (Views: 564.2ms | ActiveRecord: 207.6ms)
+Started GET "/assets/active_admin-f58fc98e42733be6473403cf53156e11.css" for 127.0.0.1 at 2014-08-27 05:52:15 -0700
+Processing by UsersController#redirect as HTML
+  Parameters: {"not_found"=>"assets/active_admin-f58fc98e42733be6473403cf53156e11.css"}
+Redirected to http://localhost:3000/
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+Started GET "/assets/active_admin-76495de5f9a0a6af340457a8d11e1130.js" for 127.0.0.1 at 2014-08-27 05:52:15 -0700
+Processing by UsersController#redirect as */*
+  Parameters: {"not_found"=>"assets/active_admin-76495de5f9a0a6af340457a8d11e1130.js"}
+Redirected to http://localhost:3000/
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/assets/active_admin/print-80ebe25ed30c2f719a2720c7dffad181.css" for 127.0.0.1 at 2014-08-27 05:52:15 -0700
+Processing by UsersController#redirect as HTML
+  Parameters: {"not_found"=>"assets/active_admin/print-80ebe25ed30c2f719a2720c7dffad181.css"}
+Redirected to http://localhost:3000/
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
