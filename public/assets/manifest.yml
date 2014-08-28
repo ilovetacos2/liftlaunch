@@ -11,6 +11,8 @@ email/twitter.jpg: email/twitter-d469adc5ec1cfdb85cc3714c3db041f4.jpg
 email/twitter/index.jpg: email/twitter-d469adc5ec1cfdb85cc3714c3db041f4.jpg
 favicon.ico: favicon-1d8eca370481ab7b6a9a69b5f201f2d4.ico
 favicon/index.ico: favicon-1d8eca370481ab7b6a9a69b5f201f2d4.ico
+home/_newpage1.jpg: home/_newpage1-fca13bd86ddeb1914c9dbd839c8d83aa.jpg
+home/_newpage1/index.jpg: home/_newpage1-fca13bd86ddeb1914c9dbd839c8d83aa.jpg
 home/hero.jpg: home/hero-dfe14a47319d7f97cf7de8fde741afb5.jpg
 home/hero/index.jpg: home/hero-dfe14a47319d7f97cf7de8fde741afb5.jpg
 home/hero@2x.jpg: home/hero@2x-c1e28d1d21fe3c0a95e55a2657b2d7ca.jpg
@@ -19,8 +21,8 @@ home/key.png: home/key-da4d58ad73bf5a155ca0f3426d90e901.png
 home/key/index.png: home/key-da4d58ad73bf5a155ca0f3426d90e901.png
 home/key@2x.png: home/key@2x-ece594ba52573774d6b752f03c5d7104.png
 home/key@2x/index.png: home/key@2x-ece594ba52573774d6b752f03c5d7104.png
-home/newpage1.jpg: home/newpage1-fca13bd86ddeb1914c9dbd839c8d83aa.jpg
-home/newpage1/index.jpg: home/newpage1-fca13bd86ddeb1914c9dbd839c8d83aa.jpg
+home/newpage1.jpg: home/newpage1-9f80401ae3492719b8f0092051d70d77.jpg
+home/newpage1/index.jpg: home/newpage1-9f80401ae3492719b8f0092051d70d77.jpg
 refer/blade-explain.png: refer/blade-explain-5d5d1eff8ab18125ccbc6e6dd4c2ff7c.png
 refer/blade-explain/index.png: refer/blade-explain-5d5d1eff8ab18125ccbc6e6dd4c2ff7c.png
 refer/blade-explain@2x.png: refer/blade-explain@2x-1d1889a0d73eb0384339b800291b99c0.png
@@ -83,8 +85,8 @@ application.js: application-d1dbc22ff3da2fa875d5b9de579f6111.js
 application/index.js: application-d1dbc22ff3da2fa875d5b9de579f6111.js
 active_admin.css: active_admin-f58fc98e42733be6473403cf53156e11.css
 active_admin/index.css: active_admin-f58fc98e42733be6473403cf53156e11.css
-application.css: application-f44862458a578dd3ef409220e5ec7063.css
-application/index.css: application-f44862458a578dd3ef409220e5ec7063.css
+application.css: application-c11c5e9607d570c2c200c2b26697d002.css
+application/index.css: application-c11c5e9607d570c2c200c2b26697d002.css
 bootstrap.css: bootstrap-44bd10ee336ff4bb54572ea33cea04d8.css
 bootstrap/index.css: bootstrap-44bd10ee336ff4bb54572ea33cea04d8.css
 core.css: core-592e3cd5207b0fad3fad0fdc60fa191a.css
