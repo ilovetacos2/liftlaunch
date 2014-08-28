@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="269b1c7b-e193-4789-9a3c-53a5751f029a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home/_newpage1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin-1ac9b7db16ce3bb6e559998f9059b9d0.css.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-705738657148de45a3020e78621a0398.css.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-c11c5e9607d570c2c200c2b26697d002.css.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/81be428f01273baddee3802d0125bf1c9aab507f/copy.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home/newpage1-9f80401ae3492719b8f0092051d70d77.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D19/650/sprockets%2F4bf568ffe1d4a6f305233a748f344d95" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DA5/2E0/sprockets%2F53c9cc0f837a6d0746a38a7d2bbd9dd8" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/active_admin-1ac9b7db16ce3bb6e559998f9059b9d0.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-705738657148de45a3020e78621a0398.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-c11c5e9607d570c2c200c2b26697d002.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D42/FE0/sprockets%2F0f035cac927bc070d3e589882e46ce6b" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D0F/480/sprockets%2F21b5074a30c7f67c2f9f31c687ab59a5" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/home/newpage1.jpg" afterPath="$PROJECT_DIR$/app/assets/images/home/_newpage1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assets/home/newpage1.jpg" afterPath="$PROJECT_DIR$/public/assets/home/_newpage1-fca13bd86ddeb1914c9dbd839c8d83aa.jpg" />
+    <list default="true" id="269b1c7b-e193-4789-9a3c-53a5751f029a" name="Default" comment="new page 1 banner">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-f7171be02ef2ec02a1ed4a076a51352c.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/core-16a21c0893effaba8b1a882cd27c7417.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home/newpage12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CA8/6E0/sprockets%2F0c8c08a348cb3823a19c65c8a5435623" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C8A/560/sprockets%2F74f40cf82dd1011b94e29865911078f9" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-f7171be02ef2ec02a1ed4a076a51352c.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/core-16a21c0893effaba8b1a882cd27c7417.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D0F/480/sprockets%2F21b5074a30c7f67c2f9f31c687ab59a5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D42/FE0/sprockets%2F0f035cac927bc070d3e589882e46ce6b" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/home/_newpage1.jpg" afterPath="$PROJECT_DIR$/app/assets/images/home/newpage1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/home/newpage1.jpg" afterPath="$PROJECT_DIR$/app/assets/images/home/newpage12.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assets/home/newpage1.jpg" afterPath="$PROJECT_DIR$/public/assets/home/newpage12-9f80401ae3492719b8f0092051d70d77.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin-76495de5f9a0a6af340457a8d11e1130.js.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin-76495de5f9a0a6af340457a8d11e1130.js.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin-f58fc98e42733be6473403cf53156e11.css.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin-f58fc98e42733be6473403cf53156e11.css.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin.css.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin.css.gz" />
@@ -30,9 +27,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin/pages/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin/pages/application.js.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-44bd10ee336ff4bb54572ea33cea04d8.css.gz" afterPath="$PROJECT_DIR$/public/assets/bootstrap-44bd10ee336ff4bb54572ea33cea04d8.css.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap.css.gz" afterPath="$PROJECT_DIR$/public/assets/bootstrap.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/core-592e3cd5207b0fad3fad0fdc60fa191a.css.gz" afterPath="$PROJECT_DIR$/public/assets/core-592e3cd5207b0fad3fad0fdc60fa191a.css.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/core.css.gz" afterPath="$PROJECT_DIR$/public/assets/core.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/home/newpage1.jpg" afterPath="$PROJECT_DIR$/app/assets/images/home/newpage1.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/home/newpage1.jpg" afterPath="$PROJECT_DIR$/public/assets/home/newpage1.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin/print-80ebe25ed30c2f719a2720c7dffad181.css.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin/print-80ebe25ed30c2f719a2720c7dffad181.css.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin/print.css.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin/print.css.gz" />
@@ -81,11 +76,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/DB1/350/sprockets%2F48ef3fa68e9084c7cfa84e525decc318" afterPath="$PROJECT_DIR$/tmp/cache/assets/DB1/350/sprockets%2F48ef3fa68e9084c7cfa84e525decc318" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D28/000/sprockets%2F492606d7bb468f23672f9b9f3fbff519" afterPath="$PROJECT_DIR$/tmp/cache/assets/D28/000/sprockets%2F492606d7bb468f23672f9b9f3fbff519" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D20/F30/sprockets%2F4b7c543f3382c52326de8cdfa835d989" afterPath="$PROJECT_DIR$/tmp/cache/assets/D20/F30/sprockets%2F4b7c543f3382c52326de8cdfa835d989" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D19/650/sprockets%2F4bf568ffe1d4a6f305233a748f344d95" afterPath="$PROJECT_DIR$/tmp/cache/assets/D19/650/sprockets%2F4bf568ffe1d4a6f305233a748f344d95" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D15/F90/sprockets%2F4c0738bac505983fc094be74453a78ec" afterPath="$PROJECT_DIR$/tmp/cache/assets/D15/F90/sprockets%2F4c0738bac505983fc094be74453a78ec" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D12/740/sprockets%2F4d5d2370d4cc9b3ca9507d900c76c857" afterPath="$PROJECT_DIR$/tmp/cache/assets/D12/740/sprockets%2F4d5d2370d4cc9b3ca9507d900c76c857" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D07/970/sprockets%2F4ee53d2f661b119d5404b2f87a90c03e" afterPath="$PROJECT_DIR$/tmp/cache/assets/D07/970/sprockets%2F4ee53d2f661b119d5404b2f87a90c03e" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/CE6/0C0/sprockets%2F5175e0dd6b9058916254953bca7f7b0e" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE6/0C0/sprockets%2F5175e0dd6b9058916254953bca7f7b0e" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D45/B90/sprockets%2F53676202cabff365b9f918be465c06fb" afterPath="$PROJECT_DIR$/tmp/cache/assets/D45/B90/sprockets%2F53676202cabff365b9f918be465c06fb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/DA5/2E0/sprockets%2F53c9cc0f837a6d0746a38a7d2bbd9dd8" afterPath="$PROJECT_DIR$/tmp/cache/assets/DA5/2E0/sprockets%2F53c9cc0f837a6d0746a38a7d2bbd9dd8" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D30/3A0/sprockets%2F5d0fbf1f6d2527b16c8b310d2d30d764" afterPath="$PROJECT_DIR$/tmp/cache/assets/D30/3A0/sprockets%2F5d0fbf1f6d2527b16c8b310d2d30d764" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D52/F00/sprockets%2F622449fe0527578d9c1f136bfbfcfd88" afterPath="$PROJECT_DIR$/tmp/cache/assets/D52/F00/sprockets%2F622449fe0527578d9c1f136bfbfcfd88" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D02/470/sprockets%2F62d847b546880cf877e874fe4e06f54f" afterPath="$PROJECT_DIR$/tmp/cache/assets/D02/470/sprockets%2F62d847b546880cf877e874fe4e06f54f" />
@@ -154,6 +151,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D4E/1B0/sprockets%2Ff7cbd26ba1d28d48de824f0e94586655" afterPath="$PROJECT_DIR$/tmp/cache/assets/D4E/1B0/sprockets%2Ff7cbd26ba1d28d48de824f0e94586655" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/DDE/420/sprockets%2Ffb8b186d5bf0307f86f65fc787d2adeb" afterPath="$PROJECT_DIR$/tmp/cache/assets/DDE/420/sprockets%2Ffb8b186d5bf0307f86f65fc787d2adeb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="$PROJECT_DIR$/public/assets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/core.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/core.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/core.css" afterPath="$PROJECT_DIR$/public/assets/core.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/production.log" afterPath="$PROJECT_DIR$/log/production.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/D07/2F0/sprockets%2F0196ccb1113d5af03c98a75771d4b8d4" afterPath="$PROJECT_DIR$/tmp/cache/assets/D07/2F0/sprockets%2F0196ccb1113d5af03c98a75771d4b8d4" />
@@ -231,8 +230,8 @@
       <file leaf-file-name="core.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/core.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40377358" vertical-offset="686" max-vertical-offset="11010">
-              <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.064150944" vertical-offset="686" max-vertical-offset="11010">
+              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -260,7 +259,6 @@
         <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
         <option value="$PROJECT_DIR$/app/views/user_mailer/signup_email.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/refer.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/core.css" />
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/config/initializers/active_admin.rb" />
@@ -268,6 +266,7 @@
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/core.css" />
       </list>
     </option>
   </component>
@@ -309,16 +308,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="liftlaunch" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="liftlaunch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="liftlaunch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -670,13 +659,18 @@
       <created>1409147866195</created>
       <updated>1409147866195</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="new page 1 banner">
+      <created>1409264213236</created>
+      <updated>1409264213236</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1285" height="659" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327787" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -692,7 +686,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34240687" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327787" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -734,7 +727,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="update config" />
     <MESSAGE value="update conf" />
     <MESSAGE value="uodate conf" />
     <MESSAGE value="change db to heroku" />
@@ -759,7 +751,8 @@
     <MESSAGE value="update admin" />
     <MESSAGE value="compile admin files" />
     <MESSAGE value="version 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1" />
+    <MESSAGE value="new page 1 banner" />
+    <option name="LAST_COMMIT_MESSAGE" value="new page 1 banner" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1126,8 +1119,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/core.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40377358" vertical-offset="686" max-vertical-offset="11010">
-          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.064150944" vertical-offset="686" max-vertical-offset="11010">
+          <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
           <folding />
         </state>
       </provider>
