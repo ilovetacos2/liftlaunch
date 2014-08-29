@@ -8290,3 +8290,5 @@ Served asset /active_admin.js - 304 Not Modified (7ms)
 
 Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2014-08-26 16:47:40 -0700
 Served asset /active_admin/print.css - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+  [1m[36m (107.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m

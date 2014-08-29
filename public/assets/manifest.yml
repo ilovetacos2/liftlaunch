@@ -23,6 +23,8 @@ home/newpage1.jpg: home/newpage1-fca13bd86ddeb1914c9dbd839c8d83aa.jpg
 home/newpage1/index.jpg: home/newpage1-fca13bd86ddeb1914c9dbd839c8d83aa.jpg
 home/newpage12.jpg: home/newpage12-9f80401ae3492719b8f0092051d70d77.jpg
 home/newpage12/index.jpg: home/newpage12-9f80401ae3492719b8f0092051d70d77.jpg
+home/newpage13.jpg: home/newpage13-959758c09e444fa7273cc6b487755ac1.jpg
+home/newpage13/index.jpg: home/newpage13-959758c09e444fa7273cc6b487755ac1.jpg
 refer/blade-explain.png: refer/blade-explain-5d5d1eff8ab18125ccbc6e6dd4c2ff7c.png
 refer/blade-explain/index.png: refer/blade-explain-5d5d1eff8ab18125ccbc6e6dd4c2ff7c.png
 refer/blade-explain@2x.png: refer/blade-explain@2x-1d1889a0d73eb0384339b800291b99c0.png
@@ -85,12 +87,12 @@ application.js: application-d1dbc22ff3da2fa875d5b9de579f6111.js
 application/index.js: application-d1dbc22ff3da2fa875d5b9de579f6111.js
 active_admin.css: active_admin-f58fc98e42733be6473403cf53156e11.css
 active_admin/index.css: active_admin-f58fc98e42733be6473403cf53156e11.css
-application.css: application-f7171be02ef2ec02a1ed4a076a51352c.css
-application/index.css: application-f7171be02ef2ec02a1ed4a076a51352c.css
+application.css: application-1485849497a1f4b36029d9af784152eb.css
+application/index.css: application-1485849497a1f4b36029d9af784152eb.css
 bootstrap.css: bootstrap-44bd10ee336ff4bb54572ea33cea04d8.css
 bootstrap/index.css: bootstrap-44bd10ee336ff4bb54572ea33cea04d8.css
-core.css: core-16a21c0893effaba8b1a882cd27c7417.css
-core/index.css: core-16a21c0893effaba8b1a882cd27c7417.css
+core.css: core-b49c7ac1653b1025b3cf88b082646751.css
+core/index.css: core-b49c7ac1653b1025b3cf88b082646751.css
 reset.css: reset-6ad98bc091cc9c97d9111ba5d3b1bc6e.css
 reset/index.css: reset-6ad98bc091cc9c97d9111ba5d3b1bc6e.css
 active_admin/admin_notes_icon.png: active_admin/admin_notes_icon-25b05cd8197f7a271d0624853a6dbdd5.png
