@@ -686,7 +686,11 @@
       <created>1409271808633</created>
       <updated>1409271808634</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="remove archive">
+      <created>1409444907348</created>
+      <updated>1409444907348</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -750,7 +754,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="precompile assets" />
     <MESSAGE value="upadet production db" />
     <MESSAGE value="update page1 title" />
     <MESSAGE value="resize submit button" />
@@ -775,7 +778,8 @@
     <MESSAGE value="disable hero titles" />
     <MESSAGE value="new banner" />
     <MESSAGE value="new banner2" />
-    <option name="LAST_COMMIT_MESSAGE" value="new banner2" />
+    <MESSAGE value="remove archive" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove archive" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
