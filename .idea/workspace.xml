@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="269b1c7b-e193-4789-9a3c-53a5751f029a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/refer.html.erb" afterPath="$PROJECT_DIR$/app/views/users/refer.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="liftlaunch.iws" />
@@ -505,7 +503,11 @@
       <created>1409707592162</created>
       <updated>1409707592162</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="change share messages">
+      <created>1409708838611</created>
+      <updated>1409708838611</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -570,7 +572,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="update page1 title" />
     <MESSAGE value="resize submit button" />
     <MESSAGE value="change tab title" />
     <MESSAGE value="change reward 3 name" />
@@ -595,7 +596,8 @@
     <MESSAGE value="new banner2" />
     <MESSAGE value="remove archive" />
     <MESSAGE value="fix ratio2 images" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix ratio2 images" />
+    <MESSAGE value="change share messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="change share messages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
